@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import MainNavigation from '../components/MainNavigation';
 
-function RootPage() {
+function RootLayout() {
 	return (
 		<>
 		<MainNavigation />
@@ -12,4 +12,4 @@ function RootPage() {
 	);
 }
 
-export default RootPage;
+export default RootLayout;
