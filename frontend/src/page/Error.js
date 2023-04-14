@@ -8,12 +8,12 @@ function ErrorPage() {
 	let message = 'Something wron!!';
 
 	if (error.state === 500) {
-		message = JSON.parse(error.data).message;
+		message = error.data.message;
 	}
 
 	if (error.status === 400) {
 		title = 'Nod found!';
-		message = 'Could not find resource or page...';
+		message = 'Could not find resource or page.';
 	}
 
 	return(
