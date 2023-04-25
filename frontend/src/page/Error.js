@@ -21,7 +21,7 @@ function ErrorPage() {
 		<MainNavigation />
 	<PageContent title={ title }>
 		<p>{ message }</p>
-	</PageContent>;
+	</PageContent>
 	</>
 	)
 }
