@@ -6,7 +6,6 @@ import NewsletterSignup from './NewsletterSignup';
 function MainNavigation() {
 	return (
 		<header className={ classes.header }>
-			<main>
 				<nav>
 					<ul className={ classes.list }>
 						<li>
@@ -41,7 +40,6 @@ function MainNavigation() {
 						</li>
 					</ul>
 				</nav>
-			</main>
 			<NewsletterSignup />
 		</header>
 	);
