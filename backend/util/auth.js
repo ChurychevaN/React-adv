@@ -4,19 +4,19 @@ const { NotAuthError } = require('./errors');
 
 const KEY = 'supersecret';
 
-function createJSONToken(email) {
+function createJSONToken( email ) {
 	return sign({ email }, KEY, { expiresIn: '1h' });
 }
 
-function validateJSONToken(token) {
+function validateJSONToken( token ) {
 	return verify(token, KEY);
 }
 
-function isValidPassword(password, storedPassword) {
+function isValidPassword( password, storedPassword ) {
 	return compare(password, storedPassword);
 }
 
-function checkAuthMiddleware(req, res, next) {
+function checkAuthMiddleware( req, res, next ) {
 	if (req.method === 'OPTIONS') {
 		return next();
 	}
@@ -24,6 +24,7 @@ function checkAuthMiddleware(req, res, next) {
 		console.log('NOT AUTH. AUTH HEADER MISSING.');
 		return next(new NotAuthError('Not authenticated.'));
 	}
+
 	const authFragments = req.headers.authorization.split(' ');
 
 	if (authFragments.length !== 2) {
