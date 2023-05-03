@@ -8,7 +8,7 @@ import EventDetailPage, {
 import NewEventPage from './page/NewEvent';
 import EditEventPage from './page/EditEvent';
 import RootLayout from './page/Root';
-import RootLayoutPage from './page/RootLayout';
+import EventRootLayout from './page/EventsRoot';
 import ErrorPage from './page/Error';
 import { action as manipulateEventAction } from './components/EventForm';
 import NewsletterPage, { action as newsletterAction } from './page/Newsletter';
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: 'events',
-				element: <RootLayoutPage />,
+				element: <EventRootLayout />,
 				children: [
 					{
 						index: true,
