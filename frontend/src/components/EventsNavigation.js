@@ -28,7 +28,6 @@ function EventsNavigation() {
 								New Event
 							</NavLink>
 						</li>) }
-
 				</ul>
 			</nav>
 		</header>
